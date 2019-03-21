@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBH-8ld8OmmRIXKFMEjYVGVXU3W8SvN5mc",
+            authDomain: "rock-paper-scissors-game-e2680.firebaseapp.com",
+            databaseURL: "https://rock-paper-scissors-game-e2680.firebaseio.com",
+            projectId: "rock-paper-scissors-game-e2680",
+            storageBucket: "rock-paper-scissors-game-e2680.appspot.com",
+            messagingSenderId: "541113005062"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>GifTastic!</title>
+</head>
+
+<body>
+    <main>
+        <div id='playArea'>
+            <div class='playerSpace' id="player1">
+                <p class='score' id='player1Score'>Wins: 0</p>
+            </div>
+            <div id='gameSpace'></div>
+            <div class='playerSpace' id='player2'>
+                <p class='score' id='player2Score'>Wins: 0</p>
+            </div>
+        </div>
+        <div id='chatBox'></div>
+        <div id="firebaseui-auth-container"></div>
+    </main>
+
+<script src="/RPS-Multiplayer/vendor/phaser.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+</body>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</html>
